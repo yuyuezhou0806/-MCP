@@ -1,0 +1,10 @@
+node_modules/
+workbuddy.local.json
+workspace/*
+!workspace/.gitkeep
+policy.local.json
+tokens.json
+employee-access.json
+staff-*.json
+*.tar.gz
+.env

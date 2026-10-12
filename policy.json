@@ -1,0 +1,7 @@
+{
+  "version": "2026-10-12-draft-1",
+  "sensitiveTerms": ["采购底价", "采购成本", "毛利", "内部报价", "客户名单", "工资", "薪资", "未公开", "商业秘密"],
+  "companyTerms": [],
+  "maxCharacters": 100000,
+  "maxFileBytes": 400000
+}

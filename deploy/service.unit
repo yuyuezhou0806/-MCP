@@ -1,0 +1,34 @@
+[Unit]
+Description=Company Safety Assist MCP
+After=network.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/company-safety-mcp/app
+ExecStart=/opt/company-safety-mcp/node/bin/node /opt/company-safety-mcp/app/http.mjs
+LoadCredential=tokens.json:/etc/company-safety-mcp/tokens.json
+Environment=SAFETY_TOKENS_FILE=/run/credentials/company-safety-mcp.service/tokens.json
+Environment=PORT=4318
+Environment=SAFETY_PUBLIC_HOST=tools.mapleai.top
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+IPAddressDeny=any
+IPAddressAllow=localhost
+MemoryMax=192M
+TasksMax=32
+LimitCORE=0
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
