@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "company-safety-assist": {
+      "type": "streamableHttp",
+      "url": "https://tools.mapleai.top/safety-mcp",
+      "headers": { "Authorization": "Bearer YOUR_PERSONAL_TOKEN" }
+    }
+  }
+}
